@@ -1,0 +1,367 @@
+export type Json =
+  | string
+  | number
+  | boolean
+  | null
+  | { [key: string]: Json }
+  | Json[]
+
+export interface Database {
+  public: {
+    Tables: {
+      signals: {
+        Row: {
+          rank: number | null
+          domain: string | null
+          month: string | null
+          company_name: string | null
+          website: string | null
+          founded_date: number | null
+          description: string | null
+          industry: string | null
+          category_groups: string | null
+          categories: string | null
+          tags: string | null
+          hq_location: string | null
+          hq_region: string | null
+          total_funding_amount_in_usd: string | null
+          last_funding_amount_in_usd: string | null
+          last_funding_date: string | null
+          last_funding_type: string | null
+          number_of_funding_rounds: string | null
+          number_of_investors: string | null
+          investors: string | null
+          acquired_by: string | null
+          acquisition_date: string | null
+          company_size: string | null
+          founders: string | null
+          number_of_founders: string | null
+          web_visits: string | null
+          web_visits_monthly_growth: string | null
+          web_visits_2_months_growth: string | null
+          web_visits_3_months_growth: string | null
+          web_visits_4_months_growth: string | null
+          web_visits_5_months_growth: string | null
+          web_visits_6_months_growth: string | null
+          top_country: string | null
+          country_breakdown: string | null
+          traffic_sources: string | null
+          social_traffic_breakdown: string | null
+          organic_search_percentage: string | null
+          paid_search_percentage: string | null
+          bounce_rate: string | null
+          bounce_rate_3_months_growth: string | null
+          session_duration_s: string | null
+          session_duration_s_3_months_growth: string | null
+          pages_per_visit: string | null
+          pages_per_visit_3_months_growth: string | null
+          similar_websites_and_audience_overlap: string | null
+          alexa_rank: string | null
+          alexa_rank_monthly_growth: string | null
+          alexa_rank_2_months_growth: string | null
+          alexa_rank_3_months_growth: string | null
+          alexa_rank_4_months_growth: string | null
+          alexa_rank_5_months_growth: string | null
+          alexa_rank_6_months_growth: string | null
+          linked_in_url: string | null
+          employee_count: string | null
+          employees_monthly_growth: string | null
+          employees_2_months_growth: string | null
+          employees_3_months_growth: string | null
+          employees_4_months_growth: string | null
+          employees_5_months_growth: string | null
+          employees_6_months_growth: string | null
+          talent_inflow: string | null
+          talent_outflow: string | null
+          talent_score: string | null
+          linked_in_followers: string | null
+          linked_in_monthly_followers_growth: string | null
+          linked_in_2_months_followers_growth: string | null
+          linked_in_3_months_followers_growth: string | null
+          linked_in_4_months_followers_growth: string | null
+          linked_in_5_months_followers_growth: string | null
+          linked_in_6_months_followers_growth: string | null
+          twitter_url: string | null
+          twitter_followers: string | null
+          twitter_monthly_followers_growth: string | null
+          twitter_2_months_followers_growth: string | null
+          twitter_3_months_followers_growth: string | null
+          twitter_4_months_followers_growth: string | null
+          twitter_5_months_followers_growth: string | null
+          twitter_6_months_followers_growth: string | null
+          instagram_url: string | null
+          instagram_followers: string | null
+          instagram_monthly_followers_growth: string | null
+          instagram_2_months_followers_growth: string | null
+          instagram_3_months_followers_growth: string | null
+          instagram_4_months_followers_growth: string | null
+          instagram_5_months_followers_growth: string | null
+          instagram_6_months_followers_growth: string | null
+          instagram_following: string | null
+          i_tunes_url: string | null
+          i_tunes_app_id: string | null
+          i_tunes_rating: string | null
+          i_tunes_reviews: string | null
+          i_tunes_monthly_reviews_growth: string | null
+          i_tunes_2_months_reviews_growth: string | null
+          i_tunes_3_months_reviews_growth: string | null
+          i_tunes_4_months_reviews_growth: string | null
+          i_tunes_5_months_reviews_growth: string | null
+          i_tunes_6_months_reviews_growth: string | null
+          google_play_url: string | null
+          google_play_app_id: string | null
+          google_play_rating: string | null
+          google_play_reviews: string | null
+          google_play_monthly_reviews_growth: string | null
+          google_play_2_months_reviews_growth: string | null
+          google_play_3_months_reviews_growth: string | null
+          google_play_4_months_reviews_growth: string | null
+          google_play_5_months_reviews_growth: string | null
+          google_play_6_months_reviews_growth: string | null
+          google_play_installs: string | null
+          contact_email: string | null
+          phone_number: string | null
+          id: number
+        }
+        Insert: {
+          rank?: number | null
+          domain?: string | null
+          month?: string | null
+          company_name?: string | null
+          website?: string | null
+          founded_date?: number | null
+          description?: string | null
+          industry?: string | null
+          category_groups?: string | null
+          categories?: string | null
+          tags?: string | null
+          hq_location?: string | null
+          hq_region?: string | null
+          total_funding_amount_in_usd?: string | null
+          last_funding_amount_in_usd?: string | null
+          last_funding_date?: string | null
+          last_funding_type?: string | null
+          number_of_funding_rounds?: string | null
+          number_of_investors?: string | null
+          investors?: string | null
+          acquired_by?: string | null
+          acquisition_date?: string | null
+          company_size?: string | null
+          founders?: string | null
+          number_of_founders?: string | null
+          web_visits?: string | null
+          web_visits_monthly_growth?: string | null
+          web_visits_2_months_growth?: string | null
+          web_visits_3_months_growth?: string | null
+          web_visits_4_months_growth?: string | null
+          web_visits_5_months_growth?: string | null
+          web_visits_6_months_growth?: string | null
+          top_country?: string | null
+          country_breakdown?: string | null
+          traffic_sources?: string | null
+          social_traffic_breakdown?: string | null
+          organic_search_percentage?: string | null
+          paid_search_percentage?: string | null
+          bounce_rate?: string | null
+          bounce_rate_3_months_growth?: string | null
+          session_duration_s?: string | null
+          session_duration_s_3_months_growth?: string | null
+          pages_per_visit?: string | null
+          pages_per_visit_3_months_growth?: string | null
+          similar_websites_and_audience_overlap?: string | null
+          alexa_rank?: string | null
+          alexa_rank_monthly_growth?: string | null
+          alexa_rank_2_months_growth?: string | null
+          alexa_rank_3_months_growth?: string | null
+          alexa_rank_4_months_growth?: string | null
+          alexa_rank_5_months_growth?: string | null
+          alexa_rank_6_months_growth?: string | null
+          linked_in_url?: string | null
+          employee_count?: string | null
+          employees_monthly_growth?: string | null
+          employees_2_months_growth?: string | null
+          employees_3_months_growth?: string | null
+          employees_4_months_growth?: string | null
+          employees_5_months_growth?: string | null
+          employees_6_months_growth?: string | null
+          talent_inflow?: string | null
+          talent_outflow?: string | null
+          talent_score?: string | null
+          linked_in_followers?: string | null
+          linked_in_monthly_followers_growth?: string | null
+          linked_in_2_months_followers_growth?: string | null
+          linked_in_3_months_followers_growth?: string | null
+          linked_in_4_months_followers_growth?: string | null
+          linked_in_5_months_followers_growth?: string | null
+          linked_in_6_months_followers_growth?: string | null
+          twitter_url?: string | null
+          twitter_followers?: string | null
+          twitter_monthly_followers_growth?: string | null
+          twitter_2_months_followers_growth?: string | null
+          twitter_3_months_followers_growth?: string | null
+          twitter_4_months_followers_growth?: string | null
+          twitter_5_months_followers_growth?: string | null
+          twitter_6_months_followers_growth?: string | null
+          instagram_url?: string | null
+          instagram_followers?: string | null
+          instagram_monthly_followers_growth?: string | null
+          instagram_2_months_followers_growth?: string | null
+          instagram_3_months_followers_growth?: string | null
+          instagram_4_months_followers_growth?: string | null
+          instagram_5_months_followers_growth?: string | null
+          instagram_6_months_followers_growth?: string | null
+          instagram_following?: string | null
+          i_tunes_url?: string | null
+          i_tunes_app_id?: string | null
+          i_tunes_rating?: string | null
+          i_tunes_reviews?: string | null
+          i_tunes_monthly_reviews_growth?: string | null
+          i_tunes_2_months_reviews_growth?: string | null
+          i_tunes_3_months_reviews_growth?: string | null
+          i_tunes_4_months_reviews_growth?: string | null
+          i_tunes_5_months_reviews_growth?: string | null
+          i_tunes_6_months_reviews_growth?: string | null
+          google_play_url?: string | null
+          google_play_app_id?: string | null
+          google_play_rating?: string | null
+          google_play_reviews?: string | null
+          google_play_monthly_reviews_growth?: string | null
+          google_play_2_months_reviews_growth?: string | null
+          google_play_3_months_reviews_growth?: string | null
+          google_play_4_months_reviews_growth?: string | null
+          google_play_5_months_reviews_growth?: string | null
+          google_play_6_months_reviews_growth?: string | null
+          google_play_installs?: string | null
+          contact_email?: string | null
+          phone_number?: string | null
+          id?: number
+        }
+        Update: {
+          rank?: number | null
+          domain?: string | null
+          month?: string | null
+          company_name?: string | null
+          website?: string | null
+          founded_date?: number | null
+          description?: string | null
+          industry?: string | null
+          category_groups?: string | null
+          categories?: string | null
+          tags?: string | null
+          hq_location?: string | null
+          hq_region?: string | null
+          total_funding_amount_in_usd?: string | null
+          last_funding_amount_in_usd?: string | null
+          last_funding_date?: string | null
+          last_funding_type?: string | null
+          number_of_funding_rounds?: string | null
+          number_of_investors?: string | null
+          investors?: string | null
+          acquired_by?: string | null
+          acquisition_date?: string | null
+          company_size?: string | null
+          founders?: string | null
+          number_of_founders?: string | null
+          web_visits?: string | null
+          web_visits_monthly_growth?: string | null
+          web_visits_2_months_growth?: string | null
+          web_visits_3_months_growth?: string | null
+          web_visits_4_months_growth?: string | null
+          web_visits_5_months_growth?: string | null
+          web_visits_6_months_growth?: string | null
+          top_country?: string | null
+          country_breakdown?: string | null
+          traffic_sources?: string | null
+          social_traffic_breakdown?: string | null
+          organic_search_percentage?: string | null
+          paid_search_percentage?: string | null
+          bounce_rate?: string | null
+          bounce_rate_3_months_growth?: string | null
+          session_duration_s?: string | null
+          session_duration_s_3_months_growth?: string | null
+          pages_per_visit?: string | null
+          pages_per_visit_3_months_growth?: string | null
+          similar_websites_and_audience_overlap?: string | null
+          alexa_rank?: string | null
+          alexa_rank_monthly_growth?: string | null
+          alexa_rank_2_months_growth?: string | null
+          alexa_rank_3_months_growth?: string | null
+          alexa_rank_4_months_growth?: string | null
+          alexa_rank_5_months_growth?: string | null
+          alexa_rank_6_months_growth?: string | null
+          linked_in_url?: string | null
+          employee_count?: string | null
+          employees_monthly_growth?: string | null
+          employees_2_months_growth?: string | null
+          employees_3_months_growth?: string | null
+          employees_4_months_growth?: string | null
+          employees_5_months_growth?: string | null
+          employees_6_months_growth?: string | null
+          talent_inflow?: string | null
+          talent_outflow?: string | null
+          talent_score?: string | null
+          linked_in_followers?: string | null
+          linked_in_monthly_followers_growth?: string | null
+          linked_in_2_months_followers_growth?: string | null
+          linked_in_3_months_followers_growth?: string | null
+          linked_in_4_months_followers_growth?: string | null
+          linked_in_5_months_followers_growth?: string | null
+          linked_in_6_months_followers_growth?: string | null
+          twitter_url?: string | null
+          twitter_followers?: string | null
+          twitter_monthly_followers_growth?: string | null
+          twitter_2_months_followers_growth?: string | null
+          twitter_3_months_followers_growth?: string | null
+          twitter_4_months_followers_growth?: string | null
+          twitter_5_months_followers_growth?: string | null
+          twitter_6_months_followers_growth?: string | null
+          instagram_url?: string | null
+          instagram_followers?: string | null
+          instagram_monthly_followers_growth?: string | null
+          instagram_2_months_followers_growth?: string | null
+          instagram_3_months_followers_growth?: string | null
+          instagram_4_months_followers_growth?: string | null
+          instagram_5_months_followers_growth?: string | null
+          instagram_6_months_followers_growth?: string | null
+          instagram_following?: string | null
+          i_tunes_url?: string | null
+          i_tunes_app_id?: string | null
+          i_tunes_rating?: string | null
+          i_tunes_reviews?: string | null
+          i_tunes_monthly_reviews_growth?: string | null
+          i_tunes_2_months_reviews_growth?: string | null
+          i_tunes_3_months_reviews_growth?: string | null
+          i_tunes_4_months_reviews_growth?: string | null
+          i_tunes_5_months_reviews_growth?: string | null
+          i_tunes_6_months_reviews_growth?: string | null
+          google_play_url?: string | null
+          google_play_app_id?: string | null
+          google_play_rating?: string | null
+          google_play_reviews?: string | null
+          google_play_monthly_reviews_growth?: string | null
+          google_play_2_months_reviews_growth?: string | null
+          google_play_3_months_reviews_growth?: string | null
+          google_play_4_months_reviews_growth?: string | null
+          google_play_5_months_reviews_growth?: string | null
+          google_play_6_months_reviews_growth?: string | null
+          google_play_installs?: string | null
+          contact_email?: string | null
+          phone_number?: string | null
+          id?: number
+        }
+      }
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      install_available_extensions_and_test: {
+        Args: Record<PropertyKey, never>
+        Returns: boolean
+      }
+    }
+    Enums: {
+      [_ in never]: never
+    }
+  }
+}
