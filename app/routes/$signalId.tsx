@@ -1,12 +1,13 @@
 import type { LoaderFunction } from '@remix-run/node';
 import { json } from '@remix-run/node';
-import { useParams } from '@remix-run/react';
+import { Link, useParams } from '@remix-run/react';
 
 import { dehydrate, QueryClient } from '@tanstack/react-query';
 
 import {
   ArrowTopRightOnSquareIcon,
   BuildingOfficeIcon,
+  ChevronLeftIcon,
   CurrencyDollarIcon,
   MapPinIcon,
   UsersIcon,
@@ -39,6 +40,15 @@ export default function SignalDetails() {
 
   return (
     <div className="mx-auto my-8 max-w-screen-2xl">
+      <div className="mb-5">
+        <Link
+          to="/"
+          className="flex w-fit items-center space-x-1 rounded-xl border-2 border-blue-500 px-3 py-1 font-bold text-blue-500 hover:border-blue-400 hover:text-blue-400"
+        >
+          <ChevronLeftIcon className="h-6 w-6" />
+          <span>Back</span>
+        </Link>
+      </div>
       <div className="space-y-5 rounded-lg border border-gray-200 bg-white p-5">
         <div className="flex gap-5">
           <div className="flex h-28 w-28 flex-col items-center justify-center rounded-lg border-2 border-gray-300 p-2 text-2xl font-semibold text-gray-600">
