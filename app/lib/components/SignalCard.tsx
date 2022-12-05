@@ -8,7 +8,8 @@ import {
 import type { LinkProps } from '@remix-run/react';
 import { Link } from '@remix-run/react';
 
-import type { Signal } from '~/routes/api/signals';
+import type { Signal } from '~/types/signal';
+
 import clsxm from '../utils/clsxm';
 
 type SignalCardProps = {

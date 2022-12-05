@@ -2,14 +2,14 @@ import { createInfiniteQuery } from 'react-query-kit';
 
 import type {
   SignalsRequestParams,
-  SignalsResponse,
+  PageableSignalsResponse,
 } from '~/routes/api/signals';
 
 import { getFetchInstance } from './fetcher';
 
 const fetchSignals = async (
   params: SignalsRequestParams
-): Promise<SignalsResponse> => {
+): Promise<PageableSignalsResponse> => {
   console.log(params);
 
   const response = await getFetchInstance().fetch(
@@ -27,7 +27,7 @@ type FetchSignalsVariables =
   | undefined;
 
 export const useFetchSignals = createInfiniteQuery<
-  SignalsResponse,
+  PageableSignalsResponse,
   FetchSignalsVariables
 >({
   primaryKey: 'signals',

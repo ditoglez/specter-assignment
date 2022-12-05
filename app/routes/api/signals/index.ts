@@ -1,7 +1,7 @@
 import type { LoaderFunction } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import { getSupabaseInstance } from '~/lib/supabase/supabase.instance';
-import type { Database } from '~/types/supabase';
+import type { Signal } from '~/types/signal';
 
 const PAGE_SIZE = 20;
 
@@ -16,25 +16,9 @@ export type PageMeta = {
   totalPages: number;
 };
 
-export type SignalRow = Partial<Database['public']['Tables']['signals']['Row']>;
-export type SignalRows = SignalRow[];
+type Signals = Signal[];
 
-export type Signal = Pick<
-  SignalRow,
-  | 'id'
-  | 'rank'
-  | 'company_name'
-  | 'founded_date'
-  | 'domain'
-  | 'industry'
-  | 'company_size'
-  | 'hq_location'
-  | 'total_funding_amount_in_usd'
->;
-
-export type Signals = Signal[];
-
-export type SignalsResponse = {
+export type PageableSignalsResponse = {
   signals: Signals;
   meta: PageMeta;
 };
