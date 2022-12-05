@@ -121,14 +121,16 @@ export default function SignalDetails() {
             className="flex flex-nowrap items-center gap-3 overflow-x-auto"
             data-swipeable
           >
-            {signal.data?.tags?.split(', ').map((tag, index) => (
-              <div
-                key={index}
-                className="whitespace-nowrap rounded-full border border-green-200 bg-green-200/50 px-3 py-1 text-xs font-semibold text-green-700"
-              >
-                {tag}
-              </div>
-            ))}
+            {signal.data?.tags
+              ?.split(', ')
+              .map((tag: string, index: number) => (
+                <div
+                  key={index}
+                  className="whitespace-nowrap rounded-full border border-green-200 bg-green-200/50 px-3 py-1 text-xs font-semibold text-green-700"
+                >
+                  {tag}
+                </div>
+              ))}
           </div>
         </div>
         <div className="max-w-md text-sm">
