@@ -3,7 +3,7 @@ import { json } from '@remix-run/node';
 import { getSupabaseInstance } from '~/lib/supabase/supabase.instance';
 import type { Database } from '~/types/supabase';
 
-const PAGE_SIZE = 100;
+const PAGE_SIZE = 20;
 
 export type SignalsRequestParams = {
   pageIndex: number;
