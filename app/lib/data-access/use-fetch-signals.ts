@@ -10,6 +10,8 @@ import { getFetchInstance } from './fetcher';
 const fetchSignals = async (
   params: SignalsRequestParams
 ): Promise<SignalsResponse> => {
+  console.log(params);
+
   const response = await getFetchInstance().fetch(
     `/signals?pageIndex=${params.pageIndex}`
   );
@@ -29,8 +31,9 @@ export const useFetchSignals = createInfiniteQuery<
   FetchSignalsVariables
 >({
   primaryKey: 'signals',
-  queryFn: ({ queryKey: [, params], pageParam = 0 }) =>
-    fetchSignals({ ...params, pageIndex: pageParam }),
+  queryFn: ({ queryKey: [, params], pageParam }) => {
+    return fetchSignals({ ...params, pageIndex: pageParam ?? 0 });
+  },
 
   getNextPageParam(lastPage) {
     return lastPage.meta.nextPageIndex ?? undefined;
