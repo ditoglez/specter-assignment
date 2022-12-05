@@ -43,7 +43,7 @@ export default function SignalDetails() {
       <div className="mb-5">
         <Link
           to="/"
-          className="flex w-fit items-center space-x-1 rounded-xl border-2 border-blue-500 px-3 py-1 font-bold text-blue-500 hover:border-blue-400 hover:text-blue-400"
+          className="flex w-fit items-center space-x-1 rounded-xl border border-blue-600 px-4 py-1 font-bold text-blue-600 hover:border-blue-500 hover:text-blue-500"
         >
           <ChevronLeftIcon className="h-6 w-6" />
           <span>Back</span>
