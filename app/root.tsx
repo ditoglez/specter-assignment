@@ -94,7 +94,6 @@ export default function App() {
           queries: {
             staleTime: 30_000,
             retry: 0,
-            refetchOnWindowFocus: false,
           },
         },
       })
