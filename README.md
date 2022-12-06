@@ -23,6 +23,14 @@ To run your Remix app locally, make sure your project's local dependencies are i
 npm install
 ```
 
+Create a new file named `.env` and add the needed variables in it:
+
+```sh
+API_BASE_URL=<API_BASE_URL>
+PROJECT_URL=<PROJECT_URL>
+PROJECT_API_KEY=<PROJECT_API_KEY>
+```
+
 Afterwards, start the Remix development server like so:
 
 ```sh
