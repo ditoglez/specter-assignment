@@ -44,7 +44,7 @@ If you're used to using the `vercel dev` command provided by [Vercel CLI](https:
 ## TODO
 
 - [ ] Add sorting on the feed (state should be preserved on page reload)
-- [ ] Add sorting on the feed (state should be preserved on page reload)
+- [ ] Add filtering on the feed (state should be preserved on page reload)
 - [ ] Preserve loaded items on page reload
 - [ ] Implement virtual scroll in order to get better performance
 - [ ] Render signal details like web visits, alexa rank, pages per visit using charts
