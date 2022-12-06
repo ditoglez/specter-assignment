@@ -1,6 +1,6 @@
 import { createQuery } from 'react-query-kit';
 
-import type { SignalRow } from '~/routes/api/signals';
+import type { SignalRow } from '~/types/signal';
 
 import { getFetchInstance } from './fetcher';
 
