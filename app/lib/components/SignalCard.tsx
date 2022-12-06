@@ -19,6 +19,7 @@ type SignalCardProps = {
 const LinkButton = ({ to, className, children }: LinkProps) => (
   <Link
     to={to}
+    prefetch="intent"
     className={clsxm(
       'rounded-xl border border-blue-600 bg-white px-4 py-1 text-center font-semibold text-blue-600 hover:border-blue-500 hover:text-blue-500',
       className
