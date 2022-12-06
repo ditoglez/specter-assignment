@@ -51,7 +51,7 @@ export const SignalCard = ({ signal }: SignalCardProps) => (
           </p>
           <span className="hidden lg:inline-flex">&#x2022;</span>
           <a
-            href={signal.domain as string}
+            href={`https://${signal.domain}`}
             rel="noreferrer"
             target="_blank"
             className="flex items-center space-x-1 text-xs font-semibold text-blue-600"
