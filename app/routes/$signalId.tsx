@@ -65,7 +65,7 @@ export default function SignalDetails() {
               </p>
               <span className="hidden lg:inline-flex">&#x2022;</span>
               <a
-                href={signal.data?.domain as string}
+                href={`https://${signal.data?.domain}`}
                 rel="noreferrer"
                 target="_blank"
                 className="flex items-center space-x-1 text-xs font-semibold text-blue-600 underline-offset-4 hover:underline"
