@@ -1,4 +1,4 @@
-# Spectre tech assignment
+# Specter tech assignment
 
 This project has been developed with [Remix](https://remix.run/docs) and configured to be deployed to [Vercel](https://vercel.com/).
 
